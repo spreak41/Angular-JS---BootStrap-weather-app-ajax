@@ -1,0 +1,33 @@
+
+<!-- TOP HALF OF THE PAGE-->   
+
+   
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h3>Forecast by City</h3>
+        <p>Enter the desired location</p>
+        <div class="form-group">
+            <input type="text" ng-model="city" class="form-control" ng-enter="toggle()" />
+        </div>
+        <a class="btn btn-primary" ng-click="toggle()">Get Forecast</a>
+    </div>
+</div>
+
+<!-- BOTTOM HALF OF THE PAGE-->
+<div class="container" ng-show="myShow">
+    <div class="row">
+        <div class="col-md-12 temp">
+           <div class="panel panel-defult">
+                   <h1 class="panel-title"> The weather in {{ location }} </h1>
+           </div>
+           <div class="panel-body">
+              <ul>
+                  <li>Temperature <span>{{temp | number:0}}&#8457</span></li>
+                  <li>Humidity <span>{{ humidity }}</span></li>
+                  <li>Pressure <span>{{ pressure }}</span></li>
+                  <li>Weather description <span>{{ description | uppercase }}</span></li>
+              </ul>
+           </div>
+        </div>
+    </div>
+</div>
